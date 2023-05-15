@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.numerical.Controller">
+   <tabs>
+      <Tab closable="false" text="Phase1">
+         <content>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="721.0">
+               <children>
+                  <TextArea fx:id="EquationsInput" layoutX="49.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="Solve" layoutX="92.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#SolveEquations" prefHeight="55.0" prefWidth="114.0" text="Solve">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="Output" layoutX="378.0" layoutY="422.0" prefHeight="35.0" prefWidth="325.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="NoOfEquations" layoutX="499.0" layoutY="85.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text layoutX="519.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of equations:" wrappingWidth="157.103515625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="513.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output" wrappingWidth="54.13671875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="Input_of_b" layoutX="295.0" layoutY="66.0" prefHeight="200.0" prefWidth="45.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Text layoutX="74.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Matrix of coefficients" wrappingWidth="150.255859375">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="317.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="b">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="ChooseFunction" layoutX="523.0" layoutY="197.0" prefWidth="150.0" />
+                  <Text layoutX="565.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Function" wrappingWidth="65.779296875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="epsilon" layoutX="505.0" layoutY="303.0" promptText="epsilon">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="noOfIterations" layoutX="295.0" layoutY="303.0" promptText="Number of iterations">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="initialValues" layoutX="394.0" layoutY="66.0" prefHeight="200.0" prefWidth="53.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Text layoutX="377.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Initial values" wrappingWidth="86.779296875">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="precision" layoutX="295.0" layoutY="352.0" promptText="Precision">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="runTime" layoutX="60.0" layoutY="422.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text layoutX="127.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Run time">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <CheckBox fx:id="Scaling" layoutX="562.0" layoutY="258.0" mnemonicParsing="false" text="Scaling" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Phase 2">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="FreeInput" layoutX="48.0" layoutY="89.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="Output2" layoutX="428.0" layoutY="452.0" prefHeight="35.0" prefWidth="270.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="Solve2" layoutX="90.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#SolveFunction" prefHeight="55.0" prefWidth="114.0" text="Solve">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="ChooseFunction2" layoutX="512.0" layoutY="190.0" prefWidth="150.0" />
+                  <TextField fx:id="noOfIterations2" layoutX="283.0" layoutY="299.0" promptText="Number of iterations">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="epsilon2" layoutX="494.0" layoutY="299.0" promptText="epsilon">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="precision2" layoutX="283.0" layoutY="356.0" promptText="Precision">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="runTime2" layoutX="55.0" layoutY="452.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text layoutX="555.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Function">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="128.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="538.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="122.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Run time">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="Lower" layoutX="272.0" layoutY="89.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="Upper" layoutX="494.0" layoutY="89.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text layoutX="314.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lower (or initial)">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="571.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upper">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
